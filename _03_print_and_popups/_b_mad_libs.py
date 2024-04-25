@@ -3,9 +3,9 @@ from tkinter import messagebox, simpledialog, Tk
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
 if __name__ == '__main__':
     # Make a new window variable, window = Tk()
-
+    window=Tk()
     # Hide the window using the window's .withdraw() method
-
+    window.withdraw()
     # Put this sentence in a pop-up message box:
     # "If you find yourself having to cross a piranha-infested river, here's how to do it..."
 
@@ -42,5 +42,5 @@ if __name__ == '__main__':
     # and ask the player different questions.
 
     # Run the window's .mainloop() method
-
+    window.mainloop()
     pass
