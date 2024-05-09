@@ -2,27 +2,35 @@ from tkinter import messagebox, simpledialog, Tk
 import random
 
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
-    
-    # Make a new window variable, window = Tk()
-    
-    # Hide the window using the window's .withdraw() method
+if __name__ == '__main__':
 
+    # Make a new window variable, window = Tk()
+    window = Tk()
+    # Hide the window using the window's .withdraw() method
+    window.withdraw()
     # 1. Make a variable equal to a positive number less than 4 using random.randInt(0, 3)
-    
+    ihatekoroks=random.randint(0, 3)
     # 2. Print your variable to the console
-    
+    print(ihatekoroks)
     # 3. Get the user to enter something that they think is awesome
-    
+    iknow=simpledialog.askstring(title="",prompt='what do you think is awesome')
     # 4. If your variable is  0
         # -- tell the user whatever they entered is awesome!
-        
+    if iknow == 'koroks':
+        messagebox.showinfo(title="",message='why you litlle!!! cencored anything i say afterwards is a lie!!!')
+
+    if ihatekoroks == 0:
+        messagebox.showinfo(title="",message='great')
     # 5. If your variable is  1
         # -- tell the user whatever they entered is ok.
-    
+    if ihatekoroks == 1:
+        messagebox.showinfo(title="",message='ehh')
     # 6. If your variable is  2
         # -- tell the user whatever they entered is boring.
-    
+    if ihatekoroks == 2:
+        messagebox.showinfo(title="",message='kinda sucks')
     # 7. If your variable is  3
-        # -- invent your own message to give to the user (be nice).
-        
+        # -- invent your own message to give to the user (be very mean).
+    if ihatekoroks == 3:
+        messagebox.showinfo(title="",message='hrnryenfwengYOUdhfkdfhdhAREsjfdrmfdfjdfvnTRASHfdjjfkhnd,mgvrfh,gvnkfg')
     # Run the window's .mainloop() method
