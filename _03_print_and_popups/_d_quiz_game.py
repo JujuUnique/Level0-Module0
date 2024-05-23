@@ -22,11 +22,6 @@ if __name__ == '__main__':
     # MAKE MORE QUESTIONS. Ask more questions by repeating the above
     #      // Option: Subtract a point from their score for a wrong answer
     hello=simpledialog.askstring(title="",prompt='ok then what is 1+1?')
-
-
-
-
-
     if hello == '726':
         messagebox.showinfo(title="",message='correct!!!!!!!!!!!!!!! plus 1 point')
         score=score+1

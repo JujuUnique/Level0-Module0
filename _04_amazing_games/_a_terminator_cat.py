@@ -45,13 +45,16 @@ def key_pressed():
 
     # 10. Increment the x and y variables of the 2 eye variables by 5:
     #     left_eye.x += 5
-    
+    left_eye.x+=1
+    left_eye.y+=1
+    right_eye.x-=1
+    right_eye.y-=1
     # 11. Call the .draw() method for both eye variables.
-
-
+    right_eye.draw()
+    left_eye.draw()
 if __name__ == '__main__':
     window = turtle.Screen()
-    
+
     # 1. Find an image of a cat with BIG eyes OR use one of the 2 images provided
     #    a. Find an image using google to search. The image must be a .gif file
     #    b. Right click on the image and select 'Save image As'
@@ -61,33 +64,37 @@ if __name__ == '__main__':
     
     # 2. Call the set_background() function with your variable inside of the parenthesis
     #    for example, set_background(bg_image)
-
+    set_background('yellowcat.png')
     # 3. Make a new turtle
-
+    slavetocode=turtle.Turtle()
     # 4. Set the turtle color and pen color to red (or any color you want)
     #    using .color('red', 'red')
-
+    slavetocode.color('red', 'red')
     # 5. Set the turtle width to 0 so no outlines are drawn
-
+    slavetocode.width(0)
     # 6. Set the turtle speed to 0 (fastest)
-
+    slavetocode.speed(0)
     # 7. Run the program and click on one of the cat's eyes. 
     #    The x,y position of the eye will be printed at the bottom of your
     #    processing window.
     #    Variables for x and y have been created at the top of your sketch, 
     #    now you can set them equal to the values you just found. Watch for
     #    negative signs!
-    
+
     # 8. After you've found the x and y for the eyes create 2 eye variables
     #    and initialize them:
     #    left_eye  = Eye(eye=my_turtle, x=-34, y=11, radius=30)
     #    right_eye = Eye(eye=my_turtle, x=40, y=-5, radius=30)
-
+    left_eye=Eye(eye=slavetocode, x=-24.0, y=40.0, radius=10)
+    right_eye=Eye(eye=slavetocode, x=45.0, y=16.0, radius=10)
     # 9. Call the .draw() method on BOTH eye variables
-
+    left_eye.draw()
+    right_eye.draw()
 
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screen_clicked)
     window.onkeypress(key_pressed, 'space')
     window.listen()
     turtle.done()
+#x24.0 y40.0
+#45.0 16.0
